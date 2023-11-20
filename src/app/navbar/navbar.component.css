@@ -1,0 +1,116 @@
+#header {
+  padding: 0.7rem 0.6rem;
+  margin-top: 1.4rem;
+}
+.navbar_logo img {
+  width: 120px;
+}
+.navbar_left_items ul li a {
+  display: block;
+  margin-right: 1.4rem;
+  font-size: 0.8rem;
+  color: var(--secondary-gray-violet);
+}
+.navbar_left_items ul li a:hover {
+  color: var(--secondary-dark-violet);
+}
+
+.navbar_right ul li a {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--secondary-gray-violet);
+}
+
+.navbar_right ul li a:hover {
+  color: black;
+}
+.navbar_menu {
+  display: none;
+}
+.menu {
+  color: var(--secondary-gray-violet);
+}
+@media (max-width: 700px) {
+  .navbar_container {
+    position: relative;
+  }
+  .navbar_menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .navbar_left {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    width: 100%;
+    transition: 0.2s ease;
+    padding: 3.5rem 1.5rem;
+    left: 0;
+    right: 0;
+    top: 150%;
+    background-color: var(--primary-violet);
+    flex-direction: column;
+    border-radius: 8px;
+  }
+  .navbar_left_items {
+    width: 100%;
+  }
+  .navbar_left_items ul {
+    flex-direction: column;
+    display: block !important;
+    width: 100% !important;
+  }
+  .navbar_left_items ul li {
+    width: 100%;
+  }
+  .navbar_left_items ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem;
+    margin: 0;
+    width: 100% !important;
+  }
+  .navbar_left_items ul li a:hover {
+    color: var(--primary-cyan);
+  }
+  .navbar_right {
+    width: 100%;
+    border-top: 1px solid var(--secondary-gray);
+    text-align: center;
+    margin: 1rem 0;
+  }
+  .navbar_right ul {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  .navbar_right ul li {
+    text-align: center;
+    width: 100%;
+  }
+  .navbar_right ul li a:not(.btn-primary) {
+    color: white;
+    font-weight: bold;
+    -bottom: 1rem;
+    padding: 1rem 0;
+  }
+  .navbar_right ul li a:hover {
+    color: var(--primary-cyan);
+  }
+  .navbar_right ul a.btn-primary {
+    margin-left: 0;
+    margin-top: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+.navbar_show {
+  visibility: visible;
+  pointer-events: all;
+  opacity: 1;
+}

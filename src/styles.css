@@ -1,1 +1,123 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  font-size: 18px;
+}
+
+:root {
+  --primary-cyan: hsl(180, 66%, 49%);
+  --primary-light-cyan: hsl(180, 66%, 59%);
+  --primary-violet: hsl(257, 27%, 26%);
+  --secondary-gray: hsl(0, 0%, 75%);
+  --secondary-gray-violet: hsl(257, 7%, 63%);
+  --secondary-dark-blue: hsl(255, 11%, 22%);
+  --secondary-dark-violet: hsl(260, 8%, 14%);
+  --secondary-red: hsl(0, 87%, 67%);
+}
+
+/* basic setup */
+.section {
+  width: 100%;
+  height: auto;
+}
+.container {
+  width: 100%;
+  max-width: 1100px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 700px) {
+  .container {
+    padding: 0 0.6rem;
+  }
+}
+
+/* utils */
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+.mr-2 {
+  margin-right: 1.4rem;
+}
+.ml-2 {
+  margin-left: 1.4rem;
+}
+.border-2 {
+  border: 2px solid red;
+}
+.btn-primary {
+  padding: 0.6rem 1rem;
+  border-radius: 25px;
+  background-color: var(--primary-cyan);
+  color: white !important;
+}
+.btn-primary:hover {
+  background-color: var(--primary-light-cyan) !important;
+}
+.flex-1 {
+  flex: 1;
+}
+.gap-2 {
+  gap: 2rem;
+}
+/* header section */
+
+/* hero section */
+
+
+/* search section  */
+
+
+/* boost section  */
+#boost {
+  padding: 3rem 0.6rem;
+  background-color: var(--primary-violet);
+  background-image: url("/assets/bg-boost-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#boost .container h1 {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}
+
+#boost .container button {
+  display: block;
+  margin: 1.4rem auto;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  #boost {
+    background-image: url("/assets/bg-boost-mobile.svg");
+  }
+}

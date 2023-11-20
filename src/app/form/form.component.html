@@ -1,0 +1,73 @@
+<section id="other" class="section">
+  <div class="container">
+    <div class="searchbar flex items-center justify-between gap-2">
+
+      <div class="input_box flex-1">
+        <input [(ngModel)]="url" type="text" placeholder="Shorten a link here..." title="Enter A Valid Url" />
+        <p><i>Enter A valid Url</i></p>
+      </div>
+      <button (click)="generate()" class="btn-primary btn-rounded" type="button">Shorten It! </button>
+
+    </div>
+    <div class="url_links">
+      <div *ngIf="isUrlGenerated || isErrorGenerated">
+        <div *ngIf="isErrorGenerated">
+          Error, url is invalid
+        </div>
+
+        <div *ngIf="isUrlGenerated">
+          <h4>Short URL: <a href="{{originUrl}}" target="_blank">{{shortUrl}}</a></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <section id="advanced_section">
+    <div class="container">
+      <div class="advanced">
+        <h1>Advanced Statistics</h1>
+        <p>
+          Track how your links are performing across the web with Our
+          advanced statistics dashboard.
+        </p>
+      </div>
+      <div class="cards flex gap-2 items-center">
+        <div class="card_line"></div>
+        <div class="card">
+          <div class="icon flex items-center justify-center">
+            <img src="/assets/icon-brand-recognition.svg" alt="brand recognition image" />
+          </div>
+          <h1>Brand Recognition</h1>
+          <p>
+            Boost your brand recognition with each click. Generic links
+            don’t mean a thing. Branded links help instil confidence in your
+            content.
+          </p>
+        </div>
+        <div class="card cardTwo">
+          <div class="icon flex items-center justify-center">
+            <img src="/assets/icon-detailed-records.svg" alt="detailed Records image" />
+          </div>
+          <h1>Detailed Records</h1>
+          <p>
+            Gain insights into who is clicking your links. Knowing when and
+            where people engage with your content helps inform better
+            decisions.
+          </p>
+        </div>
+        <div class="card cardThree">
+          <div class="icon flex items-center justify-center">
+            <img src="/assets/icon-fully-customizable.svg" alt="fully customizable image" />
+          </div>
+          <h1>Fully Customizable</h1>
+          <p>
+            Improve brand awareness and content discoverability through
+            customizable links, supercharging audience engagement.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
